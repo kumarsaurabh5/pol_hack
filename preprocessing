@@ -22,9 +22,6 @@ for video_file in video_files:
 print("frames" , frame_count)
 print("Total number of videos: " , len(frame_count))
 print('Average frame per video:',np.mean(frame_count))
-     
-
-# to extract frame
 def frame_extract(path):
   vidObj = cv2.VideoCapture(path) 
   success = 1
