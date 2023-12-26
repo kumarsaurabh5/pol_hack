@@ -1,22 +1,8 @@
-Before running the file Upload all your data set on your goole drive in a zip format
-
-
-#Mount our google drive
 from google.colab import drive
 drive.mount('/content/drive')
-     
-
-#before running this please change the RUNTIME to GPU (Runtime -> Change runtime type -> set harware accelarotor as GPU)
-#download and unzip the data from google drive Colab environment
 from google_drive_downloader import GoogleDriveDownloader as gdd
-#use only file id of the link
-#Note: Below link is just an example, Not an actual link. Actual Links are in ReadMe file
-#https://drive.google.com/file/d/1ubvKLzBDe5i1acxgGUK6ObeNBYCKUS07/view?usp=sharing
 url = '1ubvKLzBDe5i1acxgGUK6ObeNBYCKUS07'
 gdd.download_file_from_google_drive(file_id = url,dest_path='./data.zip',unzip=True)
-     
-
-#To get the average frame count 
 import json
 import glob
 import numpy as np
