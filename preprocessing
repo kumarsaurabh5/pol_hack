@@ -1,5 +1,5 @@
 from google.colab import drive
-drive.mount('/content/drive')
+drive.mount('https://drive.google.com/drive/folders/1fmxJdM0EfsJQak1f4SrBJR--gcNE5lKT')
 from google_drive_downloader import GoogleDriveDownloader as gdd
 url = '1ubvKLzBDe5i1acxgGUK6ObeNBYCKUS07'
 gdd.download_file_from_google_drive(file_id = url,dest_path='./data.zip',unzip=True)
@@ -9,8 +9,8 @@ import numpy as np
 import cv2
 import copy
 #change the path accordingly
-video_files =  glob.glob('/content/Real videos/*.mp4')
-#video_files1 =  glob.glob('/content/dfdc_train_part_0/*.mp4')
+video_files =  glob.glob('/https://drive.google.com/drive/folders/1fmxJdM0EfsJQak1f4SrBJR--gcNE5lKT')
+#video_files1 =  glob.glob('/https://drive.google.com/drive/folders/1fmxJdM0EfsJQak1f4SrBJR--gcNE5lKT')
 #video_files += video_files1
 frame_count = []
 for video_file in video_files:
@@ -30,7 +30,7 @@ def frame_extract(path):
       if success:
           yield image
 !pip3 install face_recognition
-!mkdir '/content/drive/My Drive/FF_REAL_Face_only_data'
+!mkdir 'https://drive.google.com/drive/folders/1fmxJdM0EfsJQak1f4SrBJR--gcNE5lKT'
 import torch
 import torchvision
 from torchvision import transforms
@@ -78,4 +78,4 @@ def create_face_videos(path_list,out_dir):
     out.release()
      
 
-create_face_videos(video_files,'/content/drive/My Drive/FF_REAL_Face_only_data/')
+create_face_videos(video_files,'https://drive.google.com/drive/folders/1fmxJdM0EfsJQak1f4SrBJR--gcNE5lKT')
